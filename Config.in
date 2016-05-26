@@ -38,3 +38,7 @@ menu "User-provided options"
 source "$NERVES_DEFCONFIG_DIR/Config.in"
 
 endmenu
+
+menu "Graphics"
+	source "$BR2_EXTERNAL/package/wpe/Config.in"
+endmenu
