@@ -68,7 +68,7 @@ If you're familiar with programming SDCards using `dd(1)`, this is similar.
 
 ## First time build
 
-Before you start, you may not need to do this! Check out the `mix` integration (LINK TBD)
+Before you start, you may not need to do this! Check out the `mix` [integration](https://hexdocs.pm/nerves/getting-started.html)
 if you're an Elixir programmer. In fact, the following WILL confuse you if
 you're new to Nerves. Only read on if you're interested in the mechanics of how
 Nerves works.
@@ -78,12 +78,11 @@ On Ubuntu, run the following:
 
     sudo apt-get install git g++ libssl-dev libncurses5-dev bc m4 make unzip cmake
 
-Nerves downloads a large number of files to build the toolchain, Linux kernel,
-Erlang, and other tools. It is recommended that you create a top level directory
-to cache these files so that future builds can skip the download step. This step
-is optional, so you may skip it:
+On CentOS/RHEL, run the following:
 
-    mkdir ~/.nerves-cache  # optional
+    sudo yum install git wget patch gcc-c++ ncurses-devel bc openssl-devel bzip2 flex bison perl-Data-Dumper perl-Thread-Queue
+
+Nerves downloads a large number of files to build the toolchain, Linux kernel, Erlang, and other tools. Nerves will use download these files to the location specified by setting the environment variable `NERVES_BR_DL_DIR`. If you do not set this variable it will default to creating a directory at `$HOME/.nerves/cache/buildroot`.
 
 Next, you will need to choose an initial platform and configuration. If your desired
 platform doesn't exist, we recommend that you try out Nerves on a supported platform
