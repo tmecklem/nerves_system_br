@@ -75,7 +75,7 @@ cp -R $BASE_DIR/staging/* $WORK_DIR/$ARCHIVE_NAME/staging
 
 # Clean up extra files that were copied over and aren't needed
 rm -f $WORK_DIR/$ARCHIVE_NAME/images/*.fw
-rm -f $WORK_DIR/$ARCHIVE_NAME/images/nerves-*.img
+rm -f $WORK_DIR/$ARCHIVE_NAME/images/nerves*.img
 rm -f $WORK_DIR/$ARCHIVE_NAME/images/rootfs.squashfs
 
 # The --format=ustar makes it possible for erl_tar to extract these archives
