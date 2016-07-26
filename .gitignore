@@ -2,3 +2,5 @@
 *~
 /artifacts
 /nerves-system-*
+/_build
+/deps
