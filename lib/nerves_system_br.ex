@@ -16,8 +16,7 @@ defmodule Nerves.System.BR do
 
   end
 
-  def stream(file \\ "build.log") do
-    {:ok, pid} = Nerves.System.BR.Stream.start_link(file: file)
-    IO.stream(pid, :line)
+  def stream() do
+    Nerves.System.BR.Stream
   end
 end

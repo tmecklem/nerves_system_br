@@ -12,14 +12,15 @@ export NERVES_DEFCONFIG_DIR
 -include $(NERVES_DEFCONFIG_DIR)/external.mk
 
 # DEPRECATED - For use with Nerves Mix build system pre 0.4.0
+NERVES_ARTIFACT_NAME ?= $(BR2_NERVES_SYSTEM_NAME)
 system:
-	$(BR2_EXTERNAL)/scripts/mksystem.sh $(BR2_NERVES_SYSTEM_NAME)
+	$(BR2_EXTERNAL)/scripts/mksystem.sh $(NERVES_ARTIFACT_NAME)
 
 # Create a system artifact for use with the Mix build system
 # TODO: The logic should be expanded here to make an attempt at
 #  manufacturing the name as the default.
 #  {name}-{version}.{toolchain-tuple}
-NERVES_ARTIFACT_NAME ?= $(BR2_NERVES_SYSTEM_NAME)
+
 artifact:
 	$(BR2_EXTERNAL)/scripts/mkartifact.sh $(NERVES_ARTIFACT_NAME)
 
