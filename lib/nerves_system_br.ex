@@ -2,8 +2,10 @@ defmodule Nerves.System.BR do
   use Nerves.Package.Platform
 
 
-  def bootstrap() do
-    IO.puts "RUN SYSTEM_BR"
+  def bootstrap(%{path: path}) do
+    path
+    |> Path.join("nerves_env.exs")
+    |> Code.require_file
   end
 
   def build_paths(pkg) do
