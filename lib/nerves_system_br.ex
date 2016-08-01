@@ -1,6 +1,5 @@
 defmodule Nerves.System.BR do
-  use Nerves.Package.Platform
-
+  @behaviour Nerves.Package.Platform
 
   def bootstrap(%{path: path}) do
     path
