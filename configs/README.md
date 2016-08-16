@@ -37,3 +37,8 @@ enabled by default. See:
 ```
 BR2_PACKAGE_OPENSSL=y
 ```
+
+## Linux config - code page 437
+
+`CONFIG_NLS_CODEPAGE_437` and `CONFIG_NLS_ISO8859` need to be enabled or mounting FAT filesystems created by
+fwup will fail or mount readonly.
