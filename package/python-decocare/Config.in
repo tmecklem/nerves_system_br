@@ -1,0 +1,9 @@
+config BR2_PACKAGE_PYTHON_DECOCARE
+	bool "python-decocare"
+	select BR2_PACKAGE_PYTHON_ARGCOMPLETE # runtime
+	select BR2_PACKAGE_PYTHON_DATEUTIL # runtime
+	select BR2_PACKAGE_PYTHON_PYSERIAL # runtime
+	help
+          Audit, inspect, and command MM insulin pumps.
+
+	  https://github.com/openaps/decocare

@@ -35,6 +35,12 @@ source "$BR2_EXTERNAL_NERVES_PATH/package/nerves-config/Config.in"
 source "$BR2_EXTERNAL_NERVES_PATH/package/raspijpgs/Config.in"
 source "$BR2_EXTERNAL_NERVES_PATH/package/erlang-relx/Config.in.host"
 
+# Load Custom Python Packages
+source "$BR2_EXTERNAL_NERVES_PATH/package/python-argcomplete/Config.in"
+source "$BR2_EXTERNAL_NERVES_PATH/package/python-decocare/Config.in"
+source "$BR2_EXTERNAL_NERVES_PATH/package/python-mmeowlink/Config.in"
+source "$BR2_EXTERNAL_NERVES_PATH/package/python-pyserial/Config.in"
+
 # Load user options
 menu "User-provided options"
 
