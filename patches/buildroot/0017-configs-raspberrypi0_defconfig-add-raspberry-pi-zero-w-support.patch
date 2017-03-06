@@ -1,0 +1,25 @@
+diff --git a/board/raspberrypi/genimage-raspberrypi0.cfg b/board/raspberrypi/genimage-raspberrypi0.cfg
+index a9d4c45..212c306 100644
+--- a/board/raspberrypi/genimage-raspberrypi0.cfg
++++ b/board/raspberrypi/genimage-raspberrypi0.cfg
+@@ -2,6 +2,7 @@ image boot.vfat {
+   vfat {
+     files = {
+       "bcm2708-rpi-b-plus.dtb",
++      "bcm2708-rpi-0-w.dtb",
+       "rpi-firmware/bootcode.bin",
+       "rpi-firmware/cmdline.txt",
+       "rpi-firmware/config.txt",
+diff --git a/configs/raspberrypi0_defconfig b/configs/raspberrypi0_defconfig
+index d93484f..75b189a 100644
+--- a/configs/raspberrypi0_defconfig
++++ b/configs/raspberrypi0_defconfig
+@@ -16,7 +16,7 @@ BR2_LINUX_KERNEL_DEFCONFIG="bcmrpi"
+ # Build the DTBs for A/B from the kernel sources: the zero is the same
+ # as the A+ model, just in a different form-factor
+ BR2_LINUX_KERNEL_DTS_SUPPORT=y
+-BR2_LINUX_KERNEL_INTREE_DTS_NAME="bcm2708-rpi-b-plus"
++BR2_LINUX_KERNEL_INTREE_DTS_NAME="bcm2708-rpi-b-plus bcm2708-rpi-0-w"
+ 
+ BR2_PACKAGE_RPI_FIRMWARE=y
+ # BR2_PACKAGE_RPI_FIRMWARE_INSTALL_DTB_OVERLAYS is not set

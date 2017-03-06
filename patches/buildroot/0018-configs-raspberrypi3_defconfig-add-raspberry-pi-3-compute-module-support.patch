@@ -1,0 +1,25 @@
+diff --git a/board/raspberrypi/genimage-raspberrypi3.cfg b/board/raspberrypi/genimage-raspberrypi3.cfg
+index 3c9f1e5..98ff709 100644
+--- a/board/raspberrypi/genimage-raspberrypi3.cfg
++++ b/board/raspberrypi/genimage-raspberrypi3.cfg
+@@ -2,6 +2,7 @@ image boot.vfat {
+   vfat {
+     files = {
+       "bcm2710-rpi-3-b.dtb",
++      "bcm2710-rpi-cm3.dtb",
+       "rpi-firmware/bootcode.bin",
+       "rpi-firmware/cmdline.txt",
+       "rpi-firmware/config.txt",
+diff --git a/configs/raspberrypi3_defconfig b/configs/raspberrypi3_defconfig
+index 0d8c079..de0c42d 100644
+--- a/configs/raspberrypi3_defconfig
++++ b/configs/raspberrypi3_defconfig
+@@ -18,7 +18,7 @@ BR2_LINUX_KERNEL_DEFCONFIG="bcm2709"
+ 
+ # Build the DTB from the kernel sources
+ BR2_LINUX_KERNEL_DTS_SUPPORT=y
+-BR2_LINUX_KERNEL_INTREE_DTS_NAME="bcm2710-rpi-3-b"
++BR2_LINUX_KERNEL_INTREE_DTS_NAME="bcm2710-rpi-3-b bcm2710-rpi-cm3"
+ 
+ BR2_PACKAGE_RPI_FIRMWARE=y
+ BR2_PACKAGE_RPI_FIRMWARE_INSTALL_DTB_OVERLAYS=y
