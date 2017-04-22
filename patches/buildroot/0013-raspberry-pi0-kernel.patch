@@ -1,0 +1,63 @@
+From cea45223a827a0e5986ebf569a4f3c7ca4886665 Mon Sep 17 00:00:00 2001
+From: Martin Bark <martin@barkynet.com>
+Date: Fri, 14 Apr 2017 16:32:27 +0100
+Subject: configs/raspberrypi0_defconfig: bump version to 4.9.21
+
+Signed-off-by: Martin Bark <martin@barkynet.com>
+Signed-off-by: Thomas Petazzoni <thomas.petazzoni@free-electrons.com>
+---
+ configs/raspberrypi0_defconfig | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/configs/raspberrypi0_defconfig b/configs/raspberrypi0_defconfig
+index 75b189a..10947b8 100644
+--- a/configs/raspberrypi0_defconfig
++++ b/configs/raspberrypi0_defconfig
+@@ -10,7 +10,7 @@ BR2_TOOLCHAIN_BUILDROOT_CXX=y
+ BR2_LINUX_KERNEL=y
+ BR2_LINUX_KERNEL_CUSTOM_GIT=y
+ BR2_LINUX_KERNEL_CUSTOM_REPO_URL="https://github.com/raspberrypi/linux.git"
+-BR2_LINUX_KERNEL_CUSTOM_REPO_VERSION="1ebe8d4a4c96cd6a90805c74233a468854960f67"
++BR2_LINUX_KERNEL_CUSTOM_REPO_VERSION="53460a0a50f3dd5e60266e945d0ac794ce0eca77"
+ BR2_LINUX_KERNEL_DEFCONFIG="bcmrpi"
+ 
+ # Build the DTBs for A/B from the kernel sources: the zero is the same
+diff --git a/package/rpi-firmware/rpi-firmware.hash b/package/rpi-firmware/rpi-firmware.hash
+index 6dd2163..8161d7a 100644
+--- a/package/rpi-firmware/rpi-firmware.hash
++++ b/package/rpi-firmware/rpi-firmware.hash
+@@ -1,2 +1,2 @@
+ # Locally computed
+-sha256 144de63ee1999155fc1ff597630f1a13f798e597e7c4d144b8b625fa774c1f9b rpi-firmware-7f8ac8dac0b80291cbf5e56580139034a0a42070.tar.gz
++sha256 17555bdd0d1d47f412fa8da924de8a49d7032f7ab1c48984b71e4280f3c3aa13 rpi-firmware-4b79411d54bbefb6f89cf1fc76edd7cd4940ec35.tar.gz
+diff --git a/package/rpi-firmware/rpi-firmware.mk b/package/rpi-firmware/rpi-firmware.mk
+index bf5c9dd..d2cd481 100644
+--- a/package/rpi-firmware/rpi-firmware.mk
++++ b/package/rpi-firmware/rpi-firmware.mk
+@@ -7,1 +7,1 @@
+-RPI_FIRMWARE_VERSION = 7f8ac8dac0b80291cbf5e56580139034a0a42070
++RPI_FIRMWARE_VERSION = 4b79411d54bbefb6f89cf1fc76edd7cd4940ec35
+diff --git a/package/rpi-userland/rpi-userland.hash b/package/rpi-userland/rpi-userland.hash
+index 389c1ae..24b6584 100644
+--- a/package/rpi-userland/rpi-userland.hash
++++ b/package/rpi-userland/rpi-userland.hash
+@@ -1,2 +1,2 @@
+ # Locally computed
+-sha256 f229c29ceae611101bf4716b112251b2f2a33cfbb6636d736deda4e1314bb9d9 rpi-userland-c139376e9bc6fbd93f777c7fc3c7d7cf2cc35122.tar.gz
++sha256 bef39f22992686f947d66620edbe1170116b751324114a41de8a66e9eee8eb4c rpi-userland-b8bdcc0ed922a564f117e6a9a97ebbceab0b4024.tar.gz
+diff --git a/package/rpi-userland/rpi-userland.mk b/package/rpi-userland/rpi-userland.mk
+index 4a6eb41..4e3b4ec 100644
+--- a/package/rpi-userland/rpi-userland.mk
++++ b/package/rpi-userland/rpi-userland.mk
+@@ -4,7 +4,7 @@
+ #
+ ################################################################################
+ 
+-RPI_USERLAND_VERSION = c139376e9bc6fbd93f777c7fc3c7d7cf2cc35122
++RPI_USERLAND_VERSION = b8bdcc0ed922a564f117e6a9a97ebbceab0b4024
+ RPI_USERLAND_SITE = $(call github,raspberrypi,userland,$(RPI_USERLAND_VERSION))
+ RPI_USERLAND_LICENSE = BSD-3c
+ RPI_USERLAND_LICENSE_FILES = LICENCE
+-- 
+cgit v0.12
+
